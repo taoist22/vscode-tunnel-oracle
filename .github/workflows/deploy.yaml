@@ -40,6 +40,9 @@ jobs:
       uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
       with:
         terraform_version: ${{ env.TERRAFORM_VERSION }}
+    
+    - name: Setup OCI CLI
+       uses: oracle-actions/setup-oci-cli@v1.1.1
 
     - name: Configure OCI CLI
       env:
